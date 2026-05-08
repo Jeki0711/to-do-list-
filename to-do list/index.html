@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To-Do APP</title>
+  </head>
+  <body>
+    <!-- Main application wrapper, targets the root element for JavaScript mounting -->
+    <div id="app">
+      <h1>To-Do List</h1>
+
+      <!-- Input group: label linked to the text input, button triggers task creation -->
+      <div class="input-group">
+        <label for="taskInput">Enter task</label>
+        <input type="text" id="taskInput" placeholder="Type a task..." />
+        <button id="add-button">Add</button>
+      </div>
+
+      <!-- Filter controls. Each button stores its filter type in a data attribute for event delegation -->
+      <div id="filters">
+        <button class="filter-btn" data-type="all">All</button>
+        <button class="filter-btn" data-type="active">Active</button>
+        <button class="filter-btn" data-type="completed">Completed</button>
+      </div>
+
+      <!-- Dynamic task list container, populated by JavaScript -->
+      <ul id="task-list"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
